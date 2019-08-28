@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#f2f2f2"
+	tools:context=".MainActivity">
+
+	<View
+		android:id="@+id/vHalfCircle"
+		android:layout_width="50dp"
+		android:layout_height="100dp"
+		android:layout_marginTop="16dp"
+		android:background="@drawable/half_circle"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<View
+		android:id="@+id/vSmallCircle"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_marginEnd="16dp"
+		android:background="@drawable/small_cicle"
+		app:layout_constraintBottom_toBottomOf="@id/vHalfCircle"
+		app:layout_constraintEnd_toStartOf="@id/vHalfCircle" />
+
+	<TextView
+		android:id="@+id/tvLogin"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="32dp"
+		android:text="Login"
+		android:textColor="@color/black"
+		android:textSize="32sp"
+		app:layout_constraintBottom_toBottomOf="@id/vHalfCircle"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<androidx.cardview.widget.CardView
+		android:id="@+id/cardView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="32dp"
+		app:cardCornerRadius="8dp"
+		app:cardElevation="0dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/tvLogin">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="16dp">
+
+			<TextView
+				android:id="@+id/tvHello"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Hello!!"
+				android:textColor="@color/black"
+				android:textSize="18sp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+			<TextView
+				android:id="@+id/tvUsername"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:text="Username"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/tvHello" />
+
+			<EditText
+				android:id="@+id/etUsername"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:layout_constraintTop_toBottomOf="@id/tvUsername" />
+
+			<TextView
+				android:id="@+id/tvPassword"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:text="Password"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/etUsername" />
+
+			<EditText
+				android:id="@+id/etPassword"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="16dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/tvPassword" />
+
+			<TextView
+				android:id="@+id/tvIForgot"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginEnd="8dp"
+				android:text="I Forgot"
+				android:textColor="@color/materialCyan500"
+				app:layout_constraintBottom_toBottomOf="@id/etPassword"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toTopOf="@id/etPassword" />
+		</androidx.constraintlayout.widget.ConstraintLayout>
+	</androidx.cardview.widget.CardView>
+
+	<View
+		android:id="@+id/vVerticalLine"
+		android:layout_width="5dp"
+		android:layout_height="0dp"
+		android:layout_marginStart="16dp"
+		android:background="#38b5f2"
+		app:layout_constraintBottom_toBottomOf="@id/cardView"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@id/cardView" />
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="32dp"
+		android:background="@drawable/half_blue_roundshape"
+		android:text="Login"
+		android:textColor="@color/white"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/cardView" />
+
+	<View
+		android:id="@+id/vHorizontalLine"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_marginStart="64dp"
+		android:layout_marginEnd="64dp"
+		android:layout_marginBottom="32dp"
+		android:background="#d2d2d2"
+		app:layout_constraintBottom_toTopOf="@id/ivFacebook" />
+
+	<TextView
+		android:id="@+id/tvSocialLogin"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="#f2f2f2"
+		android:padding="8dp"
+		android:text="Social Login"
+		app:layout_constraintBottom_toBottomOf="@id/vHorizontalLine"
+		app:layout_constraintEnd_toEndOf="@id/vHorizontalLine"
+		app:layout_constraintStart_toStartOf="@id/vHorizontalLine"
+		app:layout_constraintTop_toTopOf="@id/vHorizontalLine" />
+
+	<ImageView
+		android:id="@+id/ivFacebook"
+		android:layout_width="24dp"
+		android:layout_height="24dp"
+		android:layout_marginEnd="24dp"
+		android:layout_marginBottom="16dp"
+		android:src="@drawable/facebook"
+		app:layout_constraintBottom_toTopOf="@id/tvNewUser"
+		app:layout_constraintEnd_toStartOf="@id/ivInstagram"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<ImageView
+		android:id="@+id/ivInstagram"
+		android:layout_width="24dp"
+		android:layout_height="24dp"
+		android:layout_marginEnd="24dp"
+		android:layout_marginBottom="16dp"
+		android:src="@drawable/instagram"
+		app:layout_constraintBottom_toTopOf="@id/tvNewUser"
+		app:layout_constraintEnd_toStartOf="@id/ivTwitter"
+		app:layout_constraintStart_toEndOf="@id/ivFacebook" />
+
+	<ImageView
+		android:id="@+id/ivTwitter"
+		android:layout_width="24dp"
+		android:layout_height="24dp"
+		android:layout_marginEnd="24dp"
+		android:layout_marginBottom="16dp"
+		android:src="@drawable/twitter"
+		app:layout_constraintBottom_toTopOf="@id/tvNewUser"
+		app:layout_constraintEnd_toStartOf="@id/ivLinkedIn"
+		app:layout_constraintStart_toEndOf="@id/ivInstagram" />
+
+	<ImageView
+		android:id="@+id/ivLinkedIn"
+		android:layout_width="24dp"
+		android:layout_height="24dp"
+		android:layout_marginBottom="16dp"
+		android:src="@drawable/linkedin"
+		app:layout_constraintBottom_toTopOf="@id/tvNewUser"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@id/ivTwitter" />
+
+	<TextView
+		android:id="@+id/tvNewUser"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="8dp"
+		android:paddingBottom="16dp"
+		android:text="New User?"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/tvSignUp"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<TextView
+		android:id="@+id/tvSignUp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingBottom="16dp"
+		android:text="Sign Up"
+		android:textColor="@color/materialCyan500"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@id/tvNewUser" />
+</androidx.constraintlayout.widget.ConstraintLayout>
